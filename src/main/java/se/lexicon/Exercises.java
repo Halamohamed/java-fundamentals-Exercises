@@ -44,4 +44,24 @@ public class Exercises {
         String name = scanner.next();
         IO.println("Hello " + name);
     }
+    public void calculateWithInput(){
+        int number1= 45, number2= 11, result;
+        Scanner scanner = new Scanner(System.in);
+        IO.println("Enter two number to calculate the sum/substraction/multiplication");
+        IO.println("Enter First number: ");
+        number1 = scanner.nextInt();
+        IO.println("Enter Second number: ");
+        number2 = scanner.nextInt();
+        result = number1 + number2;
+        IO.println("The summation of " + number1 + " + " + number2 + " = " + result );
+
+        result = number1 - number2;
+        IO.println("The substraction of " + number1 + " - " + number2 + " = "+ result );
+
+        result = number1 * number2;
+        IO.println("The Multiplication of " + number1 + " * " + number2 + " = "+ result );
+
+        result = number1 / number2;
+        IO.println("The Division of "+ number1 + " / " + number2 + " = " + result );
+    }
 }

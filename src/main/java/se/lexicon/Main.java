@@ -16,5 +16,7 @@ public class Main {
           exercises.averageOfThreeNumbers();
           //exercise 5
         exercises.inputFromUser();
+        // exercise 6
+        exercises.calculateWithInput();
     }
 }
