@@ -1,5 +1,6 @@
 package se.lexicon;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Exercises {
@@ -75,5 +76,26 @@ public class Exercises {
         int seconds = totalSeconds % 60;
 
         IO.println(hours + ":" + minutes + ":" + seconds);
+    }
+    public void guessTheNumber (){
+        int guess= 0, temp = 0;
+        Random random = new Random();
+        int number = random.nextInt(500)+1 ;
+        Scanner scanner = new Scanner(System.in);
+        while (guess != number){
+            IO.println("Enter your guess: ");
+            guess = scanner.nextInt();
+            temp++;
+            if (guess < number){
+                IO.println("Your guess was too small. ");
+            } else if (guess > number) {
+                IO.println("You guess was too big. ");
+
+            } else {
+                IO.println("Congratulations! You guessed the number " + number + " in " + temp + " attemps." );
+            }
+        }
+        scanner.close();
+
     }
 }

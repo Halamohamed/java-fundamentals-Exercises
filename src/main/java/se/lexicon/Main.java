@@ -20,6 +20,8 @@ public class Main {
         exercises.calculateWithInput();
         // exercise 7
         exercises.convertToSeconds();
+        // exercise 8
+        exercises.guessTheNumber();
 
     }
 }
