@@ -18,15 +18,18 @@ public class Exercises {
         }
     }
     public void calculate(){
-        int number1= 12, number2= 6, sum, product, substraction, result;
+        int number1= 45, number2= 11, sum, product, substraction, result;
         result = number1 + number2;
-        IO.println("The summation of 12 + 6 = " + result );
+        IO.println("The summation of " + number1 + " + " + number2 + " = " + result );
+        number1= 55; number2 = 12;
         result = number1 - number2;
-        IO.println("The substraction of 12 - 6 = " + result );
+        IO.println("The substraction of " + number1 + " - " + number2 + " = "+ result );
+        number1 = 12; number2 = 4;
         result = number1 * number2;
-        IO.println("The Multiplication of 12 * 6 = " + result );
+        IO.println("The Multiplication of " + number1 + " * " + number2 + " = "+ result );
+        number1 = 24; number2 = 6;
         result = number1 / number2;
-        IO.println("The Division of 12 / 6 = " + result );
+        IO.println("The Division of "+ number1 + " / " + number2 + " = " + result );
     }
 
 }
