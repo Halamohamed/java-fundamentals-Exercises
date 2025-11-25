@@ -18,7 +18,7 @@ public class Exercises {
         }
     }
     public void calculate(){
-        int number1= 45, number2= 11, sum, product, substraction, result;
+        int number1= 45, number2= 11, result;
         result = number1 + number2;
         IO.println("The summation of " + number1 + " + " + number2 + " = " + result );
         number1= 55; number2 = 12;
@@ -32,4 +32,9 @@ public class Exercises {
         IO.println("The Division of "+ number1 + " / " + number2 + " = " + result );
     }
 
+    public void averageOfThreeNumbers(){
+        int number1 = 23, number2 = 11, number3= 77;
+        int average = (number1+number2+number3)/3;
+        IO.println("The average of " + number1 +" ," + number2 + ", " + number3 + " is " + average);
+    }
 }

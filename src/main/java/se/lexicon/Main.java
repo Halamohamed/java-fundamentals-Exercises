@@ -6,8 +6,13 @@ public class Main {
     static void main() {
 
           Exercises exercises = new Exercises();
+          //exercise1
           exercises.Greeting();
+          //exercise3
           exercises.calculate();
+          //exercise2
           exercises.leapYear();
+          //exercise4
+          exercises.averageOfThreeNumbers();
     }
 }
