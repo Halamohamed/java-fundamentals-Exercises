@@ -14,5 +14,7 @@ public class Main {
           exercises.leapYear();
           //exercise4
           exercises.averageOfThreeNumbers();
+          //exercise 5
+        exercises.inputFromUser();
     }
 }

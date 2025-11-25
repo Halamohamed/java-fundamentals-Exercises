@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercises {
     public void Greeting(){
-        IO.println("Hello and Welcome!");
+        IO.println("Hello Hala and Welcome!");
     }
     public void leapYear(){
         Scanner scanner = new Scanner(System.in);
@@ -36,5 +36,12 @@ public class Exercises {
         int number1 = 23, number2 = 11, number3= 77;
         int average = (number1+number2+number3)/3;
         IO.println("The average of " + number1 +" ," + number2 + ", " + number3 + " is " + average);
+    }
+
+    public void inputFromUser(){
+        Scanner scanner = new Scanner(System.in);
+        IO.println("Enter your name " );
+        String name = scanner.next();
+        IO.println("Hello " + name);
     }
 }
