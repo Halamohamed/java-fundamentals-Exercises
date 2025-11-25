@@ -18,5 +18,8 @@ public class Main {
         exercises.inputFromUser();
         // exercise 6
         exercises.calculateWithInput();
+        // exercise 7
+        exercises.convertToSeconds();
+
     }
 }

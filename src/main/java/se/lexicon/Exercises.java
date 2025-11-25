@@ -64,4 +64,16 @@ public class Exercises {
         result = number1 / number2;
         IO.println("The Division of "+ number1 + " / " + number2 + " = " + result );
     }
+
+    public void convertToSeconds(){
+        Scanner scanner = new Scanner(System.in);
+        IO.println("Enter seconds: ");
+        int totalSeconds = scanner.nextInt();
+
+        int hours = totalSeconds / 3600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+
+        IO.println(hours + ":" + minutes + ":" + seconds);
+    }
 }
