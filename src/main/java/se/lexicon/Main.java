@@ -5,23 +5,35 @@ package se.lexicon;
 public class Main {
     static void main() {
 
-          Exercises exercises = new Exercises();
-          //exercise1
-          exercises.Greeting();
-          //exercise3
-          exercises.calculate();
-          //exercise2
-          exercises.leapYear();
-          //exercise4
-          exercises.averageOfThreeNumbers();
-          //exercise 5
-        exercises.inputFromUser();
+        Exercises exercises = new Exercises();
+        //exercise1
+        exercises.Greeting();
+        //exercise3
+        exercises.calculate();
+        //exercise2
+        //exercises.leapYear();
+        //exercise4
+        //exercises.averageOfThreeNumbers();
+        //exercise 5
+        //exercises.inputFromUser();
         // exercise 6
-        exercises.calculateWithInput();
+        //exercises.calculateWithInput();
         // exercise 7
-        exercises.convertToSeconds();
+        //exercises.convertToSeconds();
         // exercise 8
-        exercises.guessTheNumber();
+        //exercises.guessTheNumber();
+
+
+            Car myCar = new Car();
+            myCar.brand = "Volvo";
+            myCar.registrationNumber = "SDG123";
+            myCar.maxSpeed = 200;
+            myCar.color = "White";
+            myCar.ownerName = "Hala";
+
+            myCar.displayCarInfo();
+
+           exercises.scorePrint();
 
     }
 }

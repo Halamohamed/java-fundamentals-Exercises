@@ -4,49 +4,54 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Exercises {
-    public void Greeting(){
+    public void Greeting() {
         IO.println("Hello Hala and Welcome!");
     }
-    public void leapYear(){
+
+    public void leapYear() {
         Scanner scanner = new Scanner(System.in);
         IO.println("Enter a Year to cheek if it is Leap year or not");
         int input = scanner.nextInt();
-        if ( (input % 400 == 0) || (input % 4 == 0 && input % 100 != 0) ){
+        if ((input % 400 == 0) || (input % 4 == 0 && input % 100 != 0)) {
             IO.println("You typed " + input + " is a Leap year");
-        }
-        else {
+        } else {
             IO.println("You typed " + input + " is NOT a Leap year");
         }
     }
-    public void calculate(){
-        int number1= 45, number2= 11, result;
+
+    public void calculate() {
+        int number1 = 45, number2 = 11, result;
         result = number1 + number2;
-        IO.println("The summation of " + number1 + " + " + number2 + " = " + result );
-        number1= 55; number2 = 12;
+        IO.println("The summation of " + number1 + " + " + number2 + " = " + result);
+        number1 = 55;
+        number2 = 12;
         result = number1 - number2;
-        IO.println("The substraction of " + number1 + " - " + number2 + " = "+ result );
-        number1 = 12; number2 = 4;
+        IO.println("The substraction of " + number1 + " - " + number2 + " = " + result);
+        number1 = 12;
+        number2 = 4;
         result = number1 * number2;
-        IO.println("The Multiplication of " + number1 + " * " + number2 + " = "+ result );
-        number1 = 24; number2 = 6;
+        IO.println("The Multiplication of " + number1 + " * " + number2 + " = " + result);
+        number1 = 24;
+        number2 = 6;
         result = number1 / number2;
-        IO.println("The Division of "+ number1 + " / " + number2 + " = " + result );
+        IO.println("The Division of " + number1 + " / " + number2 + " = " + result);
     }
 
-    public void averageOfThreeNumbers(){
-        int number1 = 23, number2 = 11, number3= 77;
-        int average = (number1+number2+number3)/3;
-        IO.println("The average of " + number1 +" ," + number2 + ", " + number3 + " is " + average);
+    public void averageOfThreeNumbers() {
+        int number1 = 23, number2 = 11, number3 = 77;
+        int average = (number1 + number2 + number3) / 3;
+        IO.println("The average of " + number1 + " ," + number2 + ", " + number3 + " is " + average);
     }
 
-    public void inputFromUser(){
+    public void inputFromUser() {
         Scanner scanner = new Scanner(System.in);
-        IO.println("Enter your name " );
+        IO.println("Enter your name ");
         String name = scanner.next();
         IO.println("Hello " + name);
     }
-    public void calculateWithInput(){
-        int number1= 45, number2= 11, result;
+
+    public void calculateWithInput() {
+        int number1 = 45, number2 = 11, result;
         Scanner scanner = new Scanner(System.in);
         IO.println("Enter two number to calculate the sum/substraction/multiplication");
         IO.println("Enter First number: ");
@@ -54,19 +59,19 @@ public class Exercises {
         IO.println("Enter Second number: ");
         number2 = scanner.nextInt();
         result = number1 + number2;
-        IO.println("The summation of " + number1 + " + " + number2 + " = " + result );
+        IO.println("The summation of " + number1 + " + " + number2 + " = " + result);
 
         result = number1 - number2;
-        IO.println("The substraction of " + number1 + " - " + number2 + " = "+ result );
+        IO.println("The substraction of " + number1 + " - " + number2 + " = " + result);
 
         result = number1 * number2;
-        IO.println("The Multiplication of " + number1 + " * " + number2 + " = "+ result );
+        IO.println("The Multiplication of " + number1 + " * " + number2 + " = " + result);
 
         result = number1 / number2;
-        IO.println("The Division of "+ number1 + " / " + number2 + " = " + result );
+        IO.println("The Division of " + number1 + " / " + number2 + " = " + result);
     }
 
-    public void convertToSeconds(){
+    public void convertToSeconds() {
         Scanner scanner = new Scanner(System.in);
         IO.println("Enter seconds: ");
         int totalSeconds = scanner.nextInt();
@@ -75,27 +80,43 @@ public class Exercises {
         int minutes = (totalSeconds % 3600) / 60;
         int seconds = totalSeconds % 60;
 
-        IO.println(hours + ":" + minutes + ":" + seconds);
+        String formattedTime = String.format("%02d:%02d:%02d" , hours, minutes, seconds);
+        IO.println(formattedTime);
+
+        //IO.println(hours + ":" + minutes + ":" + seconds);
     }
-    public void guessTheNumber (){
-        int guess= 0, temp = 0;
+
+    public void guessTheNumber() {
+        int guess = 0, temp = 0;
         Random random = new Random();
-        int number = random.nextInt(500)+1 ;
+        int number = random.nextInt(500) + 1;
         Scanner scanner = new Scanner(System.in);
-        while (guess != number){
+        while (guess != number) {
             IO.println("Enter your guess: ");
             guess = scanner.nextInt();
             temp++;
-            if (guess < number){
+            if (guess < number) {
                 IO.println("Your guess was too small. ");
             } else if (guess > number) {
                 IO.println("You guess was too big. ");
 
             } else {
-                IO.println("Congratulations! You guessed the number " + number + " in " + temp + " attemps." );
+                IO.println("Congratulations! You guessed the number " + number + " in " + temp + " attemps.");
             }
         }
         scanner.close();
 
+    }
+    public void scorePrint(){
+        Scanner scanner = new Scanner(System.in);
+        IO.println("Enter your score: ");
+        int score = scanner.nextInt();
+        if (score >= 65){
+            IO.println("Hurray, You passed!");
+        } else if (score >= 55 && score <= 64 ) {
+            IO.println("You are almost there." );
+        } else {
+            IO.println("Sorry, You did not pass.");
+        }
     }
 }
